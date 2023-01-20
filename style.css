@@ -48,6 +48,7 @@ main.container {
         background: url("./images/bg-intro-mobile.png");
         grid-template-columns: minmax(350px, 500px);
         grid-template-rows: 0.4fr 1fr;
+        margin-bottom: 1em;
     }
 
 
