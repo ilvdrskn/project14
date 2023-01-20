@@ -1,0 +1,125 @@
+:root {  
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+
+    --Blue: hsl(248, 32%, 49%);
+
+    --DarkBlue: hsl(249, 10%, 26%); 
+    --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./fonts/Poppins-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0; margin: 0;
+}
+
+body {
+    font-family: Poppins;
+    font-size: 16px;
+    background: var(--Red);
+    opacity: 1;
+    padding: 1em;
+}
+
+main.container {
+    min-height: 100vh;
+    max-width: 100vw;
+    background: url("./images/bg-intro-desktop.png") repeat-y;
+    background-size: cover;
+    display: grid;
+}
+
+.try{
+    font-weight: bolder;
+}
+
+.terms {
+    color: var(--Red);
+}
+
+
+@media screen and (max-width: 600px) {
+    main.container{
+        background: url("./images/bg-intro-mobile.png");
+        grid-template-columns: minmax(350px, 500px);
+        grid-template-rows: 0.4fr 1fr;
+    }
+
+
+    .text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+    }
+    .heading {
+        width: 50%;
+        margin-bottom: .8em;
+    }
+
+    .info {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+
+    .action-place {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .head {
+        margin-top: 4em;
+        margin-bottom: 2em;
+        width: 70%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 1em 3.5em;
+        background: var(--Blue);
+        color: white;
+        box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.342);
+    }
+
+    .form {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 2em;
+        gap: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.342);
+    }
+
+    input{
+        padding: 1em 2em;
+        border: 1px solid rgb(133, 127, 127);
+        border-radius: 5px;
+    }
+
+    button[type=submit] {
+        padding: 1em 2em;
+        font-size: 1.2em;
+        border: none;
+        background-color: var(--Green);
+        border-radius: 5px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .agreed {
+        font-size: 0.8em;
+        text-align: center;
+        padding: 0.4em;
+    }
+
+}
