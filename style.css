@@ -108,8 +108,8 @@ main.container {
     }
 
     button[type=submit] {
-        padding: 1em 1.5em;
-        font-size: 1.2em;
+        padding: .8em 1.5em;
+        font-size: 1.1em;
         border: none;
         background-color: var(--Green);
         border-radius: 5px;
