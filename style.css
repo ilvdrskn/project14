@@ -32,6 +32,77 @@ main.container {
     background: url("./images/bg-intro-desktop.png") repeat-y;
     background-size: cover;
     display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.heading {
+    max-width: 80%;
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.info {
+    width: 80%;
+    font-size: 1.2em;
+}
+
+.action-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    margin-bottom: 2em;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em 3.5em;
+    background: var(--Blue);
+    color: white;
+    box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.342);
+}
+
+.form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2em;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.342);
+}
+
+input{
+    padding: 1em 2em;
+    border: 1px solid rgb(133, 127, 127);
+    border-radius: 5px;
+}
+
+button[type=submit] {
+    padding: .8em 1.5em;
+    font-size: 1.1em;
+    border: none;
+    background-color: var(--Green);
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+}
+
+.agreed {
+    font-size: 0.8em;
+    text-align: center;
+    padding: 0.4em;
 }
 
 .try{
@@ -42,6 +113,34 @@ main.container {
     color: var(--Red);
 }
 
+
+.error {
+    outline: none;
+    border: 2px solid var(--Red);
+}
+
+.form {
+    position: relative;
+}
+
+svg{
+    position: absolute;
+    right: 20%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+input.error + svg {
+    opacity: 1;
+    visibility: visible;
+}
+
+.first {top: 9.65%;}
+.second {top: 25.8%;}
+.third {top: 40%;}
+.fourth {
+    top: 55.92%;
+}
 
 @media screen and (max-width: 600px) {
     main.container{
@@ -54,73 +153,35 @@ main.container {
 
     .text{
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         color: white;
         grid-column: 1/span 1;
         grid-row: 1/span 1;
     }
     .heading {
         width: 50%;
+        font-size: 2em;
         margin-bottom: .8em;
     }
 
     .info {
         width: 80%;
+        font-size: 1em;
         margin-bottom: 1em;
     }
 
     .action-place {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
     }
 
     .head {
         margin-top: 4em;
         margin-bottom: 2em;
         width: 70%;
-        text-align: center;
-        border-radius: 5px;
-        padding: 1em 3.5em;
-        background: var(--Blue);
-        color: white;
-        box-shadow: 0px 8px 2px rgba(0, 0, 0, 0.342);
     }
 
     .form {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
         width: 80%;
-        padding: 2em;
-        gap: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 10px 2px rgba(0, 0, 0, 0.342);
     }
 
-    input{
-        padding: 1em 2em;
-        border: 1px solid rgb(133, 127, 127);
-        border-radius: 5px;
-    }
-
-    button[type=submit] {
-        padding: .8em 1.5em;
-        font-size: 1.1em;
-        border: none;
-        background-color: var(--Green);
-        border-radius: 5px;
-        color: white;
-        font-weight: bolder;
-    }
-
-    .agreed {
-        font-size: 0.8em;
-        text-align: center;
-        padding: 0.4em;
-    }
 
 }
